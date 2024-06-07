@@ -1,24 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './Components/header';
+import Footer from './Components/footer';
+import Todos from './Components/todos';
 
 function App() {
+  let todos = [
+    {
+      sno: 1,
+      title: "Go to the market",
+      desc: "you need to go to the market"
+    },
+    {
+      sno: 2,
+      title: "Learn react",
+      desc: "you need to learn react"
+    },
+    {
+      sno: 1,
+      title: "Learn more",
+      desc: "you need to learn more"
+    }
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Header/>
+    <Todos todos = {todos}/>
+    <Footer/>
+    </>
   );
 }
 
